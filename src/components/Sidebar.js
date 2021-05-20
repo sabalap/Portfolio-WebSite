@@ -40,7 +40,7 @@ const SidebarWrapper = styled.nav`
 .sidebar {
     z-index:-1;
     transition: 0.4s ease-in-out;
-    width:100%;
+    width:80%;
     height:100%;
     position:fixed;
     transform:translate(-100%);
