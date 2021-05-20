@@ -4,10 +4,22 @@ import homeImage from "../assets/homepage/desktop/image-homepage-hero@2x.jpg";
 import { Link } from "react-router-dom";
 import profile from "../assets/homepage/desktop/profile.jpg";
 import Interested from "../components/Interested";
+import { motion } from "framer-motion";
 const Home = () => {
+    const pageVariants = {
+        in: {
+            y: 0
+        },
+        out: {
+            y: "120px"
+        }
+    }
+    const pageTransition = {
+        duration: 0.5
+    }
     return (
         <HomeWrapper>
-            <div className="container">
+            <motion.div className="container" initial="out" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
                 <div className="intro">
                     <div className="little-info">
                         <h2>
@@ -16,12 +28,12 @@ const Home = () => {
                             love building <br />
                             beautiful websites
                         </h2>
-                        <Link to="/" className="about-me-btn">
+                        <div className="about-me-btn">
                             <div className="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14"><g fill="none" fillRule="evenodd" stroke="#5FB4A2"><path d="M0 9l8 4 8-4" /><path opacity=".5" d="M0 5l8 4 8-4" /><path opacity=".25" d="M0 1l8 4 8-4" /></g></svg>
                             </div>
                             <div className="text">ABOUT ME</div>
-                        </Link>
+                        </div>
                     </div>
                 </div>
                 <div className="about-section">
@@ -31,12 +43,12 @@ const Home = () => {
                     <div className="about-me">
                         <h2>About Me</h2>
                         <p>
-                            I’m a junior front-end developer looking for a <br />new role in an exciting company.
-                            I focus on <br />writing accessible HTML, using modern CSS <br />practices and writing clean JavaScript.<br />
+                            I’m a junior front-end developer looking for a new role in an exciting company.
+                            I focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript.
                             When writing JavaScript code,
-                            I use React.<br />
+                            I use React.
                             I’m based in Tbilisi, GEORGIA.
-                            When I’m not coding, <br />you’ll find me outdoors. <br />
+                            When I’m not coding, you’ll find me outdoors.
                             I’d love you to check out my work.
                             </p>
                         <Link to="/projects" className="btn-cv">
@@ -44,7 +56,7 @@ const Home = () => {
                         </Link>
                     </div>
                 </div>
-            </div>
+            </motion.div>
             <Interested />
         </HomeWrapper>
     )
@@ -77,6 +89,7 @@ const HomeWrapper = styled.main`
             display: flex;
             height:50px;
             max-width: 220px;
+            cursor: pointer;
             &:hover .icon{
                 background-color: #55A191;
             }
@@ -154,6 +167,53 @@ const HomeWrapper = styled.main`
                 color: var(--color-white);
             }
         }
+    }
+}
+@media (max-width:1024px){
+    .about-me p{
+        margin-bottom: 40px !important;
+    }
+    .about-section{
+        grid-template-columns: 1fr;
+        .about-me{
+            text-align: center;
+        }
+    }
+}
+@media (max-width:550px){
+    .intro{
+        background-size: contain;
+        background-repeat: no-repeat;
+        .little-info{
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            .about-me-btn{
+                margin: 0 auto;
+            }
+        }
+    }
+    .about-me{
+        border:1px solid transparent !important;
+    }
+    .about-section{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:520px){
+    .about-me{
+        height: auto;
+        p{
+            line-height: 25px;
+        }
+    }
+}
+@media (max-width:380px){
+    .img-profile img{
+        height: 400px;
+    }
+    .about-section{
+        grid-gap: 20px;
     }
 }
 `

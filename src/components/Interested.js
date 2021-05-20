@@ -55,5 +55,23 @@ const InterestedWrapper = styled.section`
             }
     }
 }
+@media (max-width:768px){
+    .interested{
+        grid-template-columns: 1fr;
+        h2{
+            margin: 0 auto;
+        }
+        .contact-btn{
+            max-width: 200px;
+            margin: 0 auto;
+        }
+    }
+}
+@media (max-width:550px){
+    margin-top: 140px;
+    .interested h2{
+        text-align: center;
+    }
+}
 `
 export default Interested;

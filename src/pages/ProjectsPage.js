@@ -12,11 +12,23 @@ import huddle from "../assets/portfolio/desktop/huddle.png";
 import movie from "../assets/portfolio/desktop/movie.png";
 import quiz from "../assets/portfolio/desktop/quiz.png";
 import easybank from "../assets/portfolio/desktop/easybank.png";
+import { motion } from "framer-motion";
 const Projects = () => {
+    const pageVariants = {
+        in: {
+            y: 0
+        },
+        out: {
+            y: "120px"
+        }
+    }
+    const pageTransition = {
+        duration: 0.5
+    }
     return (
         <React.Fragment>
             <PortfolioWrapper>
-                <div className="container">
+                <motion.div className="container" initial="out" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
                     <div className="projects">
                         <div className="project">
                             <div className="img">
@@ -139,7 +151,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </PortfolioWrapper>
         </React.Fragment>
     )
@@ -154,7 +166,7 @@ const PortfolioWrapper = styled.section`
     }
 .project{
     display: grid;
-    grid-template-columns: 700px 450px;
+    grid-template-columns: 500px 450px;
     align-items: center;
     grid-gap: 50px;
     justify-content: center;
@@ -192,6 +204,29 @@ const PortfolioWrapper = styled.section`
                 color: var(--color-white);
             }
         }
+    }
+}
+@media (max-width:1024px){
+    .projects{
+        margin-top: 30px;
+    }
+    .project{
+        grid-template-columns: 600px;
+    }
+}
+@media (max-width:768px){
+    .project{
+        grid-template-columns: 400px;
+    }
+}
+@media (max-width:450px){
+    .project{
+        grid-template-columns: 350px;
+    }
+}
+@media (max-width:400px){
+    .project{
+        grid-template-columns: 300px;
     }
 }
 `

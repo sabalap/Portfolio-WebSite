@@ -22,12 +22,12 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="right">
-                    <Link to="/">
+                    <a href="https://github.com/sabalap" target="_blank">
                         <i className="fab fa-github"></i>
-                    </Link>
-                    <Link to="/">
+                    </a>
+                    <a href="https://www.facebook.com/SabaLpa/" target="_blank">
                         <i className="fab fa-facebook"></i>
-                    </Link>
+                    </a>
                     <Link to="/">
                         <i className="fab fa-linkedin"></i>
                     </Link>
@@ -78,6 +78,32 @@ background-color: var(--color-grayish-dark-blue);
                 &:hover{
                     color:var(--color-cyan);
                 }
+        }
+    }
+}
+@media (max-width:768px){
+    .container {
+        flex-direction: column;
+        .left{
+            margin-bottom: 20px;
+        }
+    }
+}
+@media (max-width:500px){
+    .container {
+        .left{
+            flex-direction: column;
+            .logo{
+                margin-right: 0px;
+                margin-bottom: 20px;
+            }
+            ul{
+                flex-direction: column;
+                align-items: center;
+                li{
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
 }

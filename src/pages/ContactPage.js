@@ -1,10 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import contactImg from "../assets/detail/desktop/contact-me.jpg";
+import { motion } from "framer-motion";
+import Interested from "../components/Interested";
 const Contact = () => {
+    const pageVariants = {
+        in: {
+            y: 0
+        },
+        out: {
+            y: "120px"
+        }
+    }
+    const pageTransition = {
+        duration: 0.5
+    }
     return (
         <ContactWrapper>
-            <div className="container">
+            <motion.div className="container" initial="out" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
                 <div className="line"></div>
                 <div className="touch">
                     <h2>Get in Touch</h2>
@@ -36,7 +49,8 @@ const Contact = () => {
                     <h2>LOCATION</h2>
                     <p>Tbilisi, Georgia</p>
                 </div>
-            </div>
+            </motion.div>
+            <Interested />
         </ContactWrapper>
     )
 }
@@ -98,6 +112,43 @@ const ContactWrapper = styled.section`
     .contact-img{
         margin-top:70px;
         text-align:center;
+    }
+}
+.interested{
+    margin-bottom: 170px;
+}
+@media (max-width:768px){
+    .touch{
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+}
+@media (max-width:700px){
+    .touch{
+        margin-bottom: 40px !important;
+    }
+    .phone-email{
+        flex-direction: column;
+        align-items: center;
+        .phone{
+            margin-bottom: 20px;
+        }
+    }
+    .interested{
+        margin-bottom: 60px;
+    }
+    .interested .line{
+        margin-bottom: 0px !important;
+    }
+}
+@media (max-width:450px){
+    .contact-img img{
+        max-width: 340px !important;
+    }
+}
+@media (max-width:400px){
+    .contact-img img{
+        max-width: 300px !important;
     }
 }
 `
