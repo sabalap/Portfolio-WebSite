@@ -54,3 +54,9 @@ a {
     height: 100vh;
   }
 }
+@media (min-width: 1520px) {
+  .container {
+    max-width: 1480px;
+    padding: 0px 20px;
+  }
+}
