@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import designo from "../assets/portfolio/desktop/designo.png";
+import designo from "../assets/portfolio/desktop/designo.jpg"
 import comfy from "../assets/portfolio/desktop/comfy.png";
 import artteo from "../assets/portfolio/desktop/artteo.png";
 import gagua from "../assets/portfolio/desktop/gagua.png";
@@ -8,11 +8,16 @@ import phonestore from "../assets/portfolio/desktop/phone-store.png";
 import vintage from "../assets/portfolio/desktop/vintage.png";
 import pure from "../assets/portfolio/desktop/pure.png";
 import fylo from "../assets/portfolio/desktop/fylo.png";
-import huddle from "../assets/portfolio/desktop/huddle.png";
+import huddle from "../assets/portfolio/desktop/huddle.jpg";
 import movie from "../assets/portfolio/desktop/movie.png";
 import quiz from "../assets/portfolio/desktop/quiz.png";
-import easybank from "../assets/portfolio/desktop/easybank.png";
+import easybank from "../assets/portfolio/desktop/easybank.jpg";
 import { motion } from "framer-motion";
+import myTeam from "../assets/portfolio/desktop/myteam.jpg";
+import arch from "../assets/portfolio/desktop/arch.jpg";
+import scoot from "../assets/portfolio/desktop/scoot.jpg";
+import payapi from "../assets/portfolio/desktop/payapi.jpg";
+import photosnap from "../assets/portfolio/desktop/photosnap.jpg";
 const Projects = () => {
     const pageVariants = {
         in: {
@@ -38,6 +43,56 @@ const Projects = () => {
                                 <h3>Designo</h3>
                                 <p>Designo multi-page website (React JS)</p>
                                 <a href="https://sleepy-shockley-7bd96d.netlify.app/" target="_blank">VISIT WEBSITE</a>
+                            </div>
+                        </div>
+                        <div className="project">
+                            <div className="img">
+                                <img src={myTeam} alt="" />
+                            </div>
+                            <div className="details">
+                                <h3>MyTeam</h3>
+                                <p>MyTeam multi-page website (React JS)</p>
+                                <a href="https://optimistic-goodall-772116.netlify.app/" target="_blank">VISIT WEBSITE</a>
+                            </div>
+                        </div>
+                        <div className="project">
+                            <div className="img">
+                                <img src={scoot} alt="" />
+                            </div>
+                            <div className="details">
+                                <h3>Scoot</h3>
+                                <p>Scoot multi-page  website (React JS)</p>
+                                <a href="https://suspicious-wozniak-4b9dbf.netlify.app/" target="_blank">VISIT WEBSITE</a>
+                            </div>
+                        </div>
+                        <div className="project">
+                            <div className="img">
+                                <img src={arch} alt="" />
+                            </div>
+                            <div className="details">
+                                <h3>Arch</h3>
+                                <p>Arch Studio multi-page website (React JS)</p>
+                                <a href="https://compassionate-shirley-04d7fd.netlify.app/" target="_blank">VISIT WEBSITE</a>
+                            </div>
+                        </div>
+                        <div className="project">
+                            <div className="img">
+                                <img src={payapi} alt="" />
+                            </div>
+                            <div className="details">
+                                <h3>PayApi</h3>
+                                <p>PayApi multi-page website (Html,Css,Js)</p>
+                                <a href="https://objective-borg-eecb85.netlify.app/" target="_blank">VISIT WEBSITE</a>
+                            </div>
+                        </div>
+                        <div className="project">
+                            <div className="img">
+                                <img src={photosnap} alt="" />
+                            </div>
+                            <div className="details">
+                                <h3>Photosnap</h3>
+                                <p>Photosnap multi-page website (Html,Css,Js)</p>
+                                <a href="https://optimistic-brattain-b2c3c7.netlify.app/" target="_blank">VISIT WEBSITE</a>
                             </div>
                         </div>
                         <div className="project">
