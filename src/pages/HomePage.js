@@ -43,7 +43,7 @@ const Home = () => {
                     <div className="about-me">
                         <h2>About Me</h2>
                         <p>
-                            I’m a junior front-end developer looking for a new role in an exciting company.
+                            I’m front-end developer looking for a new role in an exciting company.
                             I focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript.
                             When writing JavaScript code,
                             I use React.
