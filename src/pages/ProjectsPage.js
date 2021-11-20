@@ -18,6 +18,7 @@ import arch from "../assets/portfolio/desktop/arch.jpg";
 import scoot from "../assets/portfolio/desktop/scoot.jpg";
 import payapi from "../assets/portfolio/desktop/payapi.jpg";
 import photosnap from "../assets/portfolio/desktop/photosnap.jpg";
+import restaurantdine from "../assets/portfolio/desktop/restaurant-dine.jpg";
 const Projects = () => {
     const pageVariants = {
         in: {
@@ -35,6 +36,16 @@ const Projects = () => {
             <PortfolioWrapper>
                 <motion.div className="container" initial="out" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
                     <div className="projects">
+                    <div className="project">
+                            <div className="img">
+                                <img src={restaurantdine} alt="" />
+                            </div>
+                            <div className="details">
+                                <h3>Restaurant Dine</h3>
+                                <p>Restaurant multi-page website (React JS)</p>
+                                <a href="https://elastic-pike-e59123.netlify.app/" target="_blank">VISIT WEBSITE</a>
+                            </div>
+                        </div>
                         <div className="project">
                             <div className="img">
                                 <img src={designo} alt="" />
