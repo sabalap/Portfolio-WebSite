@@ -28,7 +28,7 @@ const Footer = () => {
                     <a href="https://www.facebook.com/SabaLpa/" target="_blank">
                         <i className="fab fa-facebook"></i>
                     </a>
-                    <Link to="/">
+                    <Link to="https://www.linkedin.com/in/saba-lapanashvili-782805216/" target="_blank">
                         <i className="fab fa-linkedin"></i>
                     </Link>
                 </div>
